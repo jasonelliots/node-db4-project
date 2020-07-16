@@ -26,5 +26,6 @@ function getShoppingList(id){
 
 function getInstructions(id){
     return db("recipes")
-        .select("recipes.instructions")
+        .join("recipe_steps", "recipes.id", "recipe_steps.recipe_id")
+        .select("recipes_steps.desciption")
 }

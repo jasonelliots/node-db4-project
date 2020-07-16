@@ -7,7 +7,6 @@ exports.seed = function(knex) {
       return knex('ingredients').insert([
         {name: "bread"},
         {name: "marinara sauce"},
-     
       ]);
     });
 };
